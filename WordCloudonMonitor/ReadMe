@@ -1,5 +1,6 @@
 The main script should run on startup
 
 Run the Refresh Script
-sudo python3 WordCloud/RefreshPage.py
+
+python3 WordCloud/RefreshPage.py
 
