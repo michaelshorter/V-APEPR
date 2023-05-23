@@ -29,8 +29,8 @@ except socket.error as msg:
 def update_label(label):
     message = sock.recv(128)
     if message:
-        label.config(text="Last Word: " + str(message.decode()))
-
+        #label.config(text="Last Word: " + str(message.decode()))
+        label.config(text= str(message.decode()))
     # Call this function again after 100ms
     label.after(100, lambda: update_label(label))
 
@@ -38,10 +38,10 @@ def update_label(label):
 root = tk.Tk()
 root.title("Last Word Heard...")
 root.geometry("1500x1000")
-root.configure(bg='magenta')
+root.configure(bg='#AB4F98')
 
 # Create the label and place it in the center of the window
-label = tk.Label(root, fg="white", font=('Arial', 90), background="magenta",)
+label = tk.Label(root, fg="#F8C9D3", font=('Arial', 200), background="#AB4F98",)
 label.place(relx=0.5, rely=0.5, anchor=CENTER)
 
 # Start updating the label
