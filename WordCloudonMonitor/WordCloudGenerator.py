@@ -23,9 +23,9 @@ def generate_wordcloud_from_file(file_path):
     print("Generating wordcloud...")
     # create wordcloud using data
     wordcloud = WordCloud(
-        background_color="#F8C9D3", height=900, width=1200,
+        background_color="white", height=900, width=1200,
         include_numbers = True, min_word_length=6, # minimum length of word
-        max_words = 15, margin = 4 # margin between words
+        max_words = 70, margin = 4 # margin between words
     ).generate(data)
 
     default_colors = wordcloud.to_array()
@@ -50,7 +50,7 @@ def main():
             print("Warning: Not enough words to generate wordcloud from!")
         # Sleep
         print("Sleeping...")
-        time.sleep(100)
+        time.sleep(250)
 
 if __name__ == "__main__":
     main()
