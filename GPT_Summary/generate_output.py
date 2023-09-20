@@ -1,4 +1,3 @@
-
 import os.path
 import time
 import matplotlib.pyplot as plt
@@ -124,15 +123,15 @@ def plot_text_pil(text,filename):
     FONT_FAMILY = "Helvetica.ttf"
     WIDTH = 2000
     HEIGHT = 1000
-    FONT_SIZE = 70
+    FONT_SIZE = 60
     V_MARGIN =  1.5
-    CHAR_LIMIT = 50
-    TEXT_COLOR = (255,0,0)
+    CHAR_LIMIT = 60
+    TEXT_COLOR = (255,255,255)
 
     # Create the font
     font = ImageFont.truetype(FONT_FAMILY, FONT_SIZE)
     # New image based on the settings defined above
-    img = Image.new("RGB", (WIDTH, HEIGHT),color=(255,255,255))
+    img = Image.new("RGB", (WIDTH, HEIGHT),color=(255,0,0))
     # Interface to draw on the image
     draw_interface = ImageDraw.Draw(img)
 
@@ -154,7 +153,7 @@ def plot_text_pil(text,filename):
       
 
         # Draw this line
-        draw_interface.text((30, y), line, font=font, fill=TEXT_COLOR)
+        draw_interface.text((130, y), line, font=font, fill=TEXT_COLOR)
 
         # Move on to the height at which the next line should be drawn at
         #print(y)
